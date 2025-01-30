@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.7</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  .card {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.5), rgba(0, 128, 0, 0.5)), url("https://picsum.photos/id/237/500/500");
+    box-shadow: 2px 1px 2px 1px;
+    display: none;
+  }
+
+  .pumpkin {
+    z-index: 1;
+    background-color: orange;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .eye {
+    background-color: black;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 150px;
+    transform: rotateZ(45deg)
+  }
+
+  .left {
+    left: 100px;
+  }
+
+  .right {
+    right: 100px;
+  }
+
+  .smile {
+    z-index: 1;
+    width: 450px;
+    height: 400px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+  }
+  .cut { 
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    background-color: orange;
+    border-radius: 50%;
+    bottom: 70px;
+  }
+</style>
+<body>
+  <div class="card"></div>
+
+  <div class="pumpkin">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="smile">
+      <div class="cut"></div>
+    </div>
+  </div>
+</body>
+</html>
