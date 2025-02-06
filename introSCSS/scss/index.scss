@@ -1,0 +1,12 @@
+/* In index.scss */
+
+
+.one {
+  text-decoration: underline;
+  .two {
+    font-weight: 900;
+    .three {
+      color: red;
+    }
+  }
+}
