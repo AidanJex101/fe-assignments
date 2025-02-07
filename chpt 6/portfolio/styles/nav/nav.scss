@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  .nav-search {
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    i {
+      transition: 0.3s ease-out;
+    }
+    :hover {
+      transform: scale(1.4);
+      transition: 0.3s ease-in;
+    }
+  }
+  nav {
+    .nav-label {
+      display: inline-block;
+      padding: 15px;
+      cursor: pointer;
+      transition: 0.3s ease-out;
+    }
+    :hover {
+      background-color: #333;
+      transition: 0.3s ease-in;
+      color: rgb(161, 161, 161);
+    }
+  }
+}
+
+
+
+

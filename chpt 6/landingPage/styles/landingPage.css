@@ -1,0 +1,80 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: lightgray;
+}
+html a, body a {
+  text-decoration: none;
+}
+html header, body header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: darkgreen;
+  box-shadow: 0 0 3px 3px;
+}
+html header .link, body header .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+html header .link a, body header .link a {
+  color: white;
+}
+html header .link a:hover, body header .link a:hover {
+  transition: all 500ms;
+  color: wheat;
+}
+html header .logo, body header .logo {
+  width: 80px;
+  height: 80%;
+}
+html .page-content-container, body .page-content-container {
+  margin-top: 150px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+html .page-content-container .introduction-section, body .page-content-container .introduction-section {
+  box-shadow: 1px 1px 3px 3px;
+  padding: 50px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: gray;
+  margin: 10px 20%;
+}
+html .page-content-container .introduction-section li, body .page-content-container .introduction-section li {
+  font-weight: bolder;
+}
+html .page-content-container .image-grid, body .page-content-container .image-grid {
+  margin: 50px 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+html .page-content-container .image-grid .image, body .page-content-container .image-grid .image {
+  gap: 30px;
+  box-shadow: 1px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: row;
+}
+html footer, body footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  height: 100px;
+}
+html footer a:hover, body footer a:hover {
+  transition: all 500ms;
+  color: darkgreen;
+}/*# sourceMappingURL=landingPage.css.map */
