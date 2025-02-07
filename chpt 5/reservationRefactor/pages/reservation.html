@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve your trip</title>
+</head>
+<body>
+  <form action="https://httpbin.org/post" method="post">
+
+    <input id="firstName" type="text" placeholder="First Name">
+    <input id="lastName" type="text" placeholder="Last Name">
+    <input id="email" type="email" placeholder="Email">
+
+    <label for="startDate">Start Date</label>
+    <input id="startDate" type="date">
+    <label for="endDate">End Date</label>
+    <input id="endDate" type="date">
+
+    <label for="hotel">Hotel</label>
+    <input id="hotel" type="checkbox" name="extras">
+    <label for="rentalCar">Rental Car</label>
+    <input id="rentalCar" type="checkbox" name="extras">
+    <label for="spa">Spa</label>
+    <input id="spa" type="checkbox" name="extras">
+
+    <label for="bedType"></label>
+    <select id="bedType">
+      <option value="twin">Twin</option>
+      <option value="full">Full</option>
+      <option value="queen">Queen</option>
+      <option value="king">King</option>
+      <option value="bunkBed">Bunk Bed</option>
+      <option value="doubleDeckerCouch">Double Decker Couch</option>
+    </select>
+
+
+    <label for="basicPackage">Basic Package</label>
+    <input id="basicPackage" type="radio" name="packageType">
+    <label for="premiumPackage">Premium Package</label>
+    <input id="premiumPackage" type="radio" name="packageType">
+
+    <label for="additonalInfo">Additonal Info</label>
+    <textarea id="additonalInfo"></textarea>
+
+    <input type="submit" value="Reserve">
+  </form>
+</body>
+</html>
