@@ -1,0 +1,42 @@
+@import "common.scss";
+@import "mixins.scss";
+
+body {
+  .welcome-container {
+    background-color: hotpink;
+    @include flexbox;
+    h3 {
+      color: white;
+      font-size: 50px;
+    }
+  }
+  .main-content-container {
+    .main-blog-content-container {
+      width: 100%;
+      height: fit-content;
+      @include flexbox($flex-direction: column);
+      div {
+        @include flexbox($flex-direction: column, $align-items: flex-start);
+        width: 50%;
+        height: fit-content;
+        margin: 50px 0px;
+        b {
+          color: black;
+        }
+        p {
+          color: darkgray;
+          &:nth-of-type(2){
+            color: black;
+          }
+        }
+        a {
+          color: black;
+          &:nth-of-type(2) {
+            margin: 5px 0;
+            font-size: 40px;
+           }
+        }
+      }
+    }
+ }
+}

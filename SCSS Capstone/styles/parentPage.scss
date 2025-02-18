@@ -1,0 +1,43 @@
+@import "mixins.scss";
+@import "common.scss";
+
+body {
+  .welcome-container {
+    background-color: hotpink;
+    @include flexbox;
+    h3 {
+      color: white;
+      font-size: 50px;
+    }
+  }
+  .main-content-container {
+    @include flexbox;
+    .main-content {
+      width: 40%;
+      padding: 100px;
+      p {
+        color: black;
+        font-size:20px;
+        a {
+          color: black;
+          font-weight: bolder;
+        }
+      }
+      h4 {
+        text-align: center;
+        color: black;
+        font-weight: bolder;
+        font-size: 30px;
+      }
+      i {
+        margin-bottom: -70px;
+        font-size: 90px;
+        color: darkgray;
+      }
+      div {
+        @include flexbox($justify-content: flex-start);
+        gap: 10px;
+      }
+    }
+  }
+}

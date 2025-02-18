@@ -1,0 +1,88 @@
+@import "common.scss";
+@import "mixins.scss";
+
+body {
+  .main-content-container {
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 0px;
+    .send-message-container {
+      width: 100%;
+      height: 800px;
+      @include flexbox;
+      div {
+        width: 50%;
+        height: fit-content;
+        
+      }
+      .send-message-left {
+        @include flexbox($flex-direction: column);
+        h3 {
+          align-self: flex-start;
+          font-size: 50px;
+          margin-left: 120px;
+        }
+        form {
+          width: 75%;
+          @include flexbox($flex-direction: column);
+          gap: 10px;
+          input:not(input[type="submit"]) {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: lightgray;
+            &:focus {
+              outline: none;
+              border-bottom: 3px solid darkred;
+              transition: all 300ms;
+            }
+          }
+          textarea {
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: lightgray;
+            resize: none;
+            height: 200px;
+            width: 100%;
+            &:focus {
+              outline: none;
+              border-bottom:3px solid darkred;
+              transition: all 300ms;
+            }
+          }
+          input[type="submit"] {
+            align-self: flex-start;
+            width: 100px;
+            height: 50px;
+            color: white;
+            background-color: hotpink;
+
+          }
+        }
+      }
+      .send-message-right {
+        h5 {
+          color: black;
+          font-size: 20px;
+        }
+        p {
+          color: gray;
+        }
+        i {
+          font-size: 30px;
+          color: hotpink;
+        }
+        div {
+          div {
+            @include flexbox($justify-content: flex-start);
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+}

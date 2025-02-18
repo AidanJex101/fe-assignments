@@ -1,0 +1,107 @@
+@import "mixins.scss"; 
+@import "common.scss";
+
+body {
+  .blog-anchor {color: black;}
+  .welcome-container {
+    a {
+      @include flexbox;
+      width: 120px;
+      height: 40px;
+      background-color: hotpink;
+      margin-top: 60px;
+    }
+    p {
+      font-size: 20px;
+    }
+    @include flexbox($flex_direction: column);
+    background-image: url(../assets/img/parallax_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .main-content-container {
+    .stand-for-container {
+      text-align: center;
+      color: darkgray;
+      font-weight: 600;
+      h2 {
+        margin-top: 100px;
+      }
+      .stand-for-grid {
+        margin: 100px 0px;
+        display: flex;
+      }
+    }
+    .about-container {
+      @include flexbox;
+      width: 100%;
+      height: 400px;
+      background-image: url("../assets/img/slider1.jpg");
+      background-size: cover;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      text-align: center;
+      h3 {
+        color: white;
+        font-size: 40px;   
+      }
+      .text-section {
+        font-size: 30px;
+      }
+      img {
+        margin-left: 50px;
+        width: 30%;
+      }
+    }
+    .blog-container {
+      height: 300px;
+      text-align: center;
+      .blog-grid {
+        width: 100%;
+        height: 200px;
+        margin-top: 60px;
+        @include flexbox($justify-content: space-around);
+        div {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        p {
+          color: darkgray;
+          font-weight: 600;
+        }
+      }
+    }
+    .get-in-touch-container {
+      width: 100%;
+      height: 500px;
+      background-image: url("../assets/img/slider1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+      h3 {
+        margin-left: -50px;
+        color: white;
+        font-size: 40px;   
+      }
+      
+      @include flexbox($flex_direction: "column", $justify-content: flex-start);
+      .get-in-touch-content {
+        margin-left: 300px;
+        .header-container {
+          margin-left: -50px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          i {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}

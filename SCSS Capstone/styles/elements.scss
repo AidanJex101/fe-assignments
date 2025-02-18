@@ -1,0 +1,36 @@
+@import "mixins.scss";
+@import "common.scss";
+
+html, body {
+  
+  color: black;
+  .welcome-container {
+    background-color: hotpink;
+    @include flexbox($flex-direction: column);
+    color: white;
+    h3 {
+      color: white;
+      font-size: 50px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .main-content-container {
+    font-size: 20px;
+    @include flexbox;
+    a {
+      color: black;
+      font-weight: bolder;
+    }
+    .main-content {
+      width: 40%;
+      h3 {
+        font-size: 40px;
+      }
+    }
+  }
+  footer {
+    color: white;
+  }
+}
