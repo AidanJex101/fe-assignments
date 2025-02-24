@@ -13,7 +13,23 @@ myObject = {
     dob : "11/21/2005",
     grades_completed : ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th"],
   },
-  delete_me : true
+  delete_me : true,
+
+  toString() {
+    return "Person " + this.id + "'s name is " + this.name + ". They are " + this.age + " years old and were born " + this.dob + ". They have been through " + this.grades_completed[this.grades_completed.length - 1] + " grade. They also have a friend named " + this.friend.name 
+  }
+}
+
+console.log(myObject.toString())
+
+for (property in myObject) {
+  console.log(myObject[property])
+}
+
+delete myObject["delete_me"]
+
+for (property in myObject) {
+  console.log(myObject[property])
 }
 
 // Challenge 2
@@ -31,20 +47,31 @@ user = {
 }
 
 
-user.semesters[semester_number] = "complete"
+user.semesters["semester_two"] = "complete"
 
 delete user.semesters.semester_four
 
 user["favorite_language"] = "Javascript"
 
+for (property in user) {
+  console.log(user[property])
+}
+
 // Challenge 3
 
-function removeFirstValue(array) {
-  array.shift()
-  return array
+myArrayObj = {
+  array : [1, 2, 3, 4, 5],
+  removeFirstValue() {
+    console.log(this.array.shift())
+    console.log(this.array)
+  },
+  removeLastValue() {
+    console.log(this.array.pop())
+    console.log(this.array)
+  }
 }
 
-function removeLastValue(array) {
-  array.pop()
-  return array
-}
+myArrayObj.removeFirstValue()
+myArrayObj.removeLastValue()
+
+
