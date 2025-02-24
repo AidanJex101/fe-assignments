@@ -5,15 +5,15 @@ function isString(string) {
     return false
   }
   else {
-    return false
+    return true
   }
 }
 
 // Program 2
 
 function isBlankString(string) {
-  for (letter in string) {
-    if (letter != " ") {
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] != " ") {
       return false
     }
   }
@@ -22,45 +22,81 @@ function isBlankString(string) {
 
 // Program 3
 
-function capitilizeFirst(string) {
-  string[0].toUpperCase()
-  return string
+function captializeFirst(string) {
+  newString = ""
+  firstLetter = false
+  for (let i = 0; i < string.length; i++) {
+    if (firstLetter == false && string[i] != " ") {
+      newString += string[i].toUpperCase()
+      firstLetter = true
+    }
+    else {
+      newString += string[i]
+    }
+    
+  }
+  return newString
 }
 
 // Program 4
 
 function abbr(string) {
-  let previous_letter = ""
-  let onLastName = False
+  let newString = ""
+  let previousLetter = ""
+
   for (let i = 0; i < string.length; i++) {
-    if (previous_letter == " " && onLastName == False) {
-      string[i + 1] = "."
-      stringArray = string.split(".")
-      string = stringArray[0] + "."
+    if (previousLetter == " ") {
+      newString += string[i] + "."
       break
     }
-    previous_letter = string[0]
+    newString += string[i]
+    previousLetter = string[i]
   }
-  return string
+  return newString
 }
 
 // Program 5
 
 function truncate(string, characterAmount) {
-  dotCount = 3
-  for (let i = characterAmount; i < string.length; i++) {
-    while (dotCount > 0) {
-      string[i] = "."
-      dotCount--
-    }
-    string[i] = ""
+  let newString = ""
+  let dotCount = 3
+  for (let i = 0; i < characterAmount; i++) {
+    newString += string[i]
   }
-  return string
+  while (dotCount > 0) {
+    newString += "."
+    dotCount--
+  } 
+  return newString
 }
 
 // Program 6
 
 function endOfG(string) {
-  myArray = string.slice("g", 2)
-  return myArray[1]
+  let gIndex = 0
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == "g" || string[i] == "G") {
+      gIndex = i
+      break
+    }
+  }
+  return string.slice(gIndex)
+  
 }
+
+// Testing
+
+console.log(isString("abc"))
+console.log(isString(190))
+
+console.log(isBlankString("")) 
+console.log(isBlankString(" ")) 
+console.log(isBlankString("fjfjf")) 
+
+console.log(captializeFirst("abcdef")) 
+
+console.log(abbr("Ryan Curtis")) 
+
+console.log(truncate("I am a long sentence", 6)) 
+
+console.log(endOfG("The practitioners grappled on the road side!"))
