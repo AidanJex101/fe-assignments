@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aidan's Pizzeria</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img class="header-logo" src="img/aidan-pizza-logo.png" href="index.html">
+      <ul class="header-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </div>
+    <h1>Order a Aidan Pizza</h1>
+    <h3>We strive to have the fastest delivery time with the best costomer service</h3>
+    <form action="https://www.stonecoldprofessor.com/pizza-order.php" method="post" class="main-info">
+      <div class="pizza-type-main">
+        <img src="img/pizza-image-1.jpg" class="pizza-image pizza-image-1">
+        <div class="pizza-type">
+          <h3>Customize your pizza!</h3>
+          <div class="pizza-toppings padding">
+            <div class="topping-container">
+              <label for="sausage"><img src="img/sausage.webp"></label>
+              <input name="toppings[]" value="sausage" type="checkbox" id="sausage" class="margin-right">Sausage
+            </div>
+            <div class="topping-container">
+              <label for="ham"><img src="img/ham.jfif"></label>
+              <input name="toppings[]" value="ham" type="checkbox" id="ham" class="margin-right">Ham 
+            </div>
+            <div class="topping-container">
+              <label for="pepperoni"><img src="img/pepperoni.jfif"></label>
+              <input name="toppings[]" id="pepperoni" value="pepperoni" type="checkbox" class="margin-right">Pepperoni
+            </div>
+            <div class="topping-container">
+              <label for="anchovies"><img src="img/anchovies.jfif"></label>
+              <input name="toppings[]" id="anchovies" value="fish" type="checkbox" class="margin-right">Anchovies
+            </div>
+            <div class="topping-container">
+              <label for="cheese"><img src="img/cheese.jpg"></label>
+              <input name="toppings[]" id="cheese" value="extra cheese" type="checkbox" class="margin-right">Extra Cheese 
+            </div>
+            <div class="topping-container">
+              <label for="olives"><img src="img/olives.jfif"></label>
+              <input name="toppings[]" id="olives" value="olives" type="checkbox" class="margin-right">Olives
+            </div>
+            <div class="topping-container">
+              <label for="bell-peppers"><img src="img/bellpeppers.webp"></label> 
+              <input name="toppings[]" id="bell-peppers" value="bell peppers" type="checkbox" class="margin-right">Bell Peppers
+            </div>
+            <div class="topping-container">
+              <label for="pineapple"><img src="img/pineapple.jpg"></label>
+              <input name="toppings[]" id="pineapple" value="pineapple" type="checkbox" class="margin-right">Pineapple
+            </div>
+            
+            
+           
+            
+            
+          </div>
+          <div class="pizza-size padding">
+            <input name="size" value="Small" type="radio">SM
+            <input name="size" value="Medium" type="radio">MD
+            <input name="size" value="Large" type="radio">LG
+            <input name="size" value="Extra Large" type="radio">XL
+  
+            <select name="crust" class="pizza-crust padding">
+              <option value="Thick">Thick
+              <option value="Thin">Thin
+              <option value="Pan">Pan
+              <option value="Keto">No Crust
+            </select>
+            <input name="comments" placeholder="Comments" type="text">
+    
+          </div>
+        </div>
+        <img src="img/pizza-image-2.jpeg" class="pizza-image pizza-image-2">  
+      </div>
+      
+    </div>
+    <div class="delivery-info-main">
+      <img src="img/maxresdefault.jpg" class="pizza-image pizza-image-4">
+      <div class="delivery-info">
+        <h3>Delivery Information</h3>
+        <div class="delivery-1 padding">
+          <input name="first" placeholder="First name" type="text">
+          <input name="last" placeholder="Last name" type="text">
+          <input name="add1" placeholder="Address 1" type="text" required>
+          <input name="add2" placeholder="Address 2" type="text">
+        </div>
+        <div class="delivery-2 padding">
+          <input name="city" placeholder="City" type="text" required>
+          <select name="state" class="state" required>
+            <option value="Alabama">AL
+            <option value="Alaska">AK
+            <option value="Arizona">AZ
+            <option value="Arkansas">AR
+            <option value="California">CA
+            <option value="Colorado">CO
+            <option value="Connecticut">CT
+            <option value="Delaware">DE
+            <option value="Florida">FL
+            <option value="Georgia">GA            
+            <option value="Hawaii">HI
+            <option value="Idaho">ID
+            <option value="Illinois">IL
+            <option value="Indiana">IN
+            <option value="Iowa">IA
+            <option value="Kansas">KS
+            <option value="Kentucky">KY
+            <option value="Louisiana">LA
+            <option value="Maine">ME
+            <option value="Maryland">MD
+            <option value="Massachusetts">MA            
+            <option value="Michigan">MI
+            <option value="Minnesota">MN
+            <option value="Mississippi">MS
+            <option value="Missouri">MO
+            <option value="Montana">MT
+            <option value="Nebraska">NE
+            <option value="Nevada">NV
+            <option value="New Hampshire">NH
+            <option value="New Jersey">NJ
+            <option value="New Mexico">NM
+            <option value="New York">NY            
+            <option value="North Carolina">NC
+            <option value="North Dakotav">ND
+            <option value="Ohio">OH
+            <option value="Oklahoma">OK
+            <option value="Oregon">OR
+            <option value="Pennsylvania">PA
+            <option value="Rhode Island">RI
+            <option value="South Carolina">SC
+            <option value="South Carolina">SD
+            <option value="Tennessee">TN
+            <option value="Texas">TX            
+            <option value="Utah">UT
+            <option value="Vermont">VT
+            <option value="Virginia">VA
+            <option value="Washington">WA
+            <option value="West Virginia">WV
+            <option value="Wisconsin">WI
+            <option value="Wyoming">WY
+          </select>
+          <input name="zip" placeholder="Zip code" type="text" required>
+        </div>
+        <div class="delivery-3 padding">
+          <input name="phone" placeholder="Phone number" type="text" required>
+          <input name="email" placeholder="Email address" type="text" required>
+        </div>
+          
+        <div class="submit-buttons padding">
+          <input type="submit">
+          <input type="reset">
+        </div>
+      </div>
+      <img src="img/Pizza-Delivery-2-738x493.jpg" class="pizza-image pizza-image-3">
+    </div>
+    
+
+  </form>
+
+  </body>
+</html>
