@@ -1,0 +1,33 @@
+.main-content-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.form-container {
+  width: 75%;
+  height: 75%;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-container h1 {
+  margin-bottom: 100px;
+}
+
+form section {
+  margin: 20px;
+}
+
+form input[type="submit"] {
+  margin-left: 40%;
+  width: 100px;
+  height: 50px;
+}
+
+form input[type="submit"]:hover {
+  background-color: green;
+  transition: all 500ms;
+}

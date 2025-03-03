@@ -4,46 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reserve your trip</title>
+  <link rel="stylesheet" href="../styles/common.css">
+  <link rel="stylesheet" href="../styles/reservation.css">
 </head>
 <body>
-  <form action="https://httpbin.org/post" method="post">
+  <nav>
+    <a class="logo" href="#">
+      <img src="../assets/airplaneLogo.webp" width="100%" alt="">
+    </a>
+    <div class="link">
+      <a href="../index.html">Home</a>
+    </div>
+    <div class="link">
+      <a href="../pages/reservation.html">Reserve a Trip</a>
+    </div>
+    <div class="link">
+      <a href="../index.html">About</a>
+    </div>
+    <div class="link">
+      <a href="../index.html">Contact</a>
+    </div>
+  </nav>
+  <div class="main-content-container">
+    <div class="form-container">
+      <h1>Reserve your trip now!</h1>
+      <form action="https://httpbin.org/post" method="post">
 
-    <input id="firstName" type="text" placeholder="First Name">
-    <input id="lastName" type="text" placeholder="Last Name">
-    <input id="email" type="email" placeholder="Email">
+        <section>
+          <input id="firstName" type="text" placeholder="First Name">
+          <input id="lastName" type="text" placeholder="Last Name">
+          <input id="email" type="email" placeholder="Email">
+        </section>
+        
+        <section>
+          <label for="startDate">Start Date</label>
+          <input id="startDate" type="date">
+          <label for="endDate">End Date</label>
+          <input id="endDate" type="date">
+        </section>
+        
+        <section>
+          <label for="hotel">Hotel</label>
+          <input id="hotel" type="checkbox" name="extras">
+          <label for="rentalCar">Rental Car</label>
+          <input id="rentalCar" type="checkbox" name="extras">
+          <label for="spa">Spa</label>
+          <input id="spa" type="checkbox" name="extras">
+        </section>
+        
+        <section>
+          <label for="bedType">Bed Type</label>
+          <select id="bedType">
+            <option value="twin">Twin</option>
+            <option value="full">Full</option>
+            <option value="queen">Queen</option>
+            <option value="king">King</option>
+            <option value="bunkBed">Bunk Bed</option>
+            <option value="doubleDeckerCouch">Double Decker Couch</option>
+          </select>
+        </section>
+        
+        <section>
+          <label for="basicPackage">Basic Package</label>
+          <input id="basicPackage" type="radio" name="packageType">
+          <label for="premiumPackage">Premium Package</label>
+          <input id="premiumPackage" type="radio" name="packageType">
+        </section>
+        
+        <section>
+          <label for="additonalInfo">Additonal Info</label>
+          <textarea id="additonalInfo"></textarea>
+        </section>
+        
+        <input type="submit" value="Reserve">
 
-    <label for="startDate">Start Date</label>
-    <input id="startDate" type="date">
-    <label for="endDate">End Date</label>
-    <input id="endDate" type="date">
-
-    <label for="hotel">Hotel</label>
-    <input id="hotel" type="checkbox" name="extras">
-    <label for="rentalCar">Rental Car</label>
-    <input id="rentalCar" type="checkbox" name="extras">
-    <label for="spa">Spa</label>
-    <input id="spa" type="checkbox" name="extras">
-
-    <label for="bedType"></label>
-    <select id="bedType">
-      <option value="twin">Twin</option>
-      <option value="full">Full</option>
-      <option value="queen">Queen</option>
-      <option value="king">King</option>
-      <option value="bunkBed">Bunk Bed</option>
-      <option value="doubleDeckerCouch">Double Decker Couch</option>
-    </select>
-
-
-    <label for="basicPackage">Basic Package</label>
-    <input id="basicPackage" type="radio" name="packageType">
-    <label for="premiumPackage">Premium Package</label>
-    <input id="premiumPackage" type="radio" name="packageType">
-
-    <label for="additonalInfo">Additonal Info</label>
-    <textarea id="additonalInfo"></textarea>
-
-    <input type="submit" value="Reserve">
-  </form>
+      </form>
+    </div>
+    
+  </div>
 </body>
 </html>
