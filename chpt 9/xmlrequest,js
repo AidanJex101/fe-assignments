@@ -1,0 +1,12 @@
+const requestObject = new XMLHttpRequest();
+
+requestObject.open('GET', 'https://www.swapi.tech/api/planets')
+requestObject.responseType='json'
+requestObject.send();
+
+requestObject.onload = () => {
+  console.log(requestObject)
+  console.log(requestObject.response)
+  console.log(requestObject.response.results)
+  console.log(requestObject.response.results[0])
+}
