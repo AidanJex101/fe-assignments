@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM build</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+  <div id="login-section">
+    <label for="email">Email: </label>
+    <input type="text" id="email">
+    <label for="password">Password: </label>
+    <input type="password" id="password" required>
+
+    <button onClick="login()">Login</button>
+    <p id="login-error" class="error hidden">Invalid email or password</p>
+  </div>
+
+  <div id="atm-menu" class="hidden">
+    <p id="balance-display"></p>
+    <button onClick="toggleTransaction('deposit')">Deposit Money</button>
+    <button  onClick="toggleTransaction('withdraw')">Withdraw Money</button>
+
+    <button>Logout</button>
+  </div>
+
+  <div id="deposit-section" class="hidden">
+    <label for="deposit-amount">Enter Deposit Amount: </label>
+    <input id="deposit-amount" type="number" min="1" step="10" required>
+
+    <button onClick="completeTransaction('deposit')">Complete Deposit</button>
+    <button>Cancel</button>
+    <p id="deposit-error" class="error hidden">Please enter a valid deposit amount</p>
+  </div>
+
+  <div id="withdraw-section" class="hidden">
+    <label for="withdraw-amount"></label>
+    <input id="withdraw-amount" type="number" min="1" step="10" required>
+
+    <button onClick="completeTransaction('withdraw')">Complete Withdrawal</button>
+    <button>Cancel</button>
+    <p id="withdraw-error" class="error hidden">Please enter a valid withdraw amount</p>
+  </div>
+
+  <div id="transaction-history" class="hidden">
+    <h3>Transaction History</h3>
+    <ul id="transaction-list"></ul>
+  </div>
+
+</body>
+</html>

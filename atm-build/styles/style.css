@@ -1,0 +1,17 @@
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.deposit {
+  color: green;
+}
+
+.withdraw {
+  color: red;
+}
