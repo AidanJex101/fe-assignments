@@ -1,0 +1,12 @@
+.text-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text-container p {
+  font-size: larger;
+  text-align: center;
+}
