@@ -1,0 +1,14 @@
+.card-container {
+  padding: 30px;
+  border: 5px solid black;
+  background-color: lightgray;
+  width: 25%;
+  height: 200px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 30px;
+}
