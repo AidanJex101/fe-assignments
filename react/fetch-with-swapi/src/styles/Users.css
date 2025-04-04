@@ -1,0 +1,24 @@
+.user-list {
+  width: 50vw;
+  height: 50vh;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user-list li {
+  font-size: larger;
+}
+
+
+.user-list ol {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.user-list a {
+  text-decoration: underline;
+  color: black;
+}
