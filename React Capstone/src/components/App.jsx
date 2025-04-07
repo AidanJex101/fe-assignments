@@ -1,7 +1,9 @@
 
 import '../styles/App.scss'
-import Home from './Home'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Home from './Home'
+import NotFound from './NotFound'
+
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
           <Route path="/products"/>
           <Route path="/contact"/>
           <Route path="/about"/>
+          <Route path="*" component={NotFound}/>
         </Switch>
       </BrowserRouter>
     </>
