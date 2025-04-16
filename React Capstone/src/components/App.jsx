@@ -6,6 +6,9 @@ import NotFound from './NotFound'
 import Products from './Products'
 import Contact from './Contact'
 import About from './About'
+import Product from './Product'
+import Header from './Header'
+import Footer from './Footer'
 
 
 function App() {
@@ -13,13 +16,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/products" component={Products}/>
-          <Route exact path="/contact" component={Contact}/>
-          <Route exact path="/about" component={About}/>
-          <Route path="*" component={NotFound}/>
-        </Switch>
+        <Header/>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/products" component={Products}/>
+            <Route path="/products/" component={Product}/>
+            <Route exact path="/contact" component={Contact}/>
+            <Route exact path="/about" component={About}/>
+            <Route path="*" component={NotFound}/>
+          </Switch>
+        <Footer/>
       </BrowserRouter>
     </>
   )

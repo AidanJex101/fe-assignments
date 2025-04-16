@@ -1,12 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
 .main-content-container {
+  height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   color: white;
   text-align: center;
   h1 {
+    font-family: "Teko", sans-serif;
     margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 50px;
+    margin-left: 0;
   }
   .hero-image {
     img {
@@ -15,5 +22,19 @@
     margin: 50px;
     width: 400px;
     height: 400px;
+  }
+  .text-container {
+    .quote {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 50%);
+      p {
+        font-size: larger;
+      }
+      h2 {
+        font-weight: 100;
+        
+      }
+    }
   }
 }
