@@ -1,4 +1,4 @@
-import '../styles/NotFound.scss'
+
 
 function NotFound() {
   return (

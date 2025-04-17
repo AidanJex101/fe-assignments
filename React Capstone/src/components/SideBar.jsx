@@ -1,5 +1,4 @@
 
-import "../styles/SideBar.scss";
 import {useState, useEffect} from 'react'
 import { LifeLine } from "react-loading-indicators";
 

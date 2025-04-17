@@ -1,7 +1,30 @@
-import '../styles/ProductCard.scss'
+
 import { NavLink } from 'react-router-dom'
+import { useContext, useState, useEffect } from 'react'
+import { CartContext } from '../context/CartProvider'
 import Counter from './Counter'
 export default function ProductCard(props) {
+  const cartData = useContext(CartContext)
+  
+  const [count, setCount] = useState(1)
+  const [cartItem, setCartItem] = useState({
+    name: props.title,
+    price: props.price,
+    image: props.image,
+    id: props.uid
+  })
+
+  useEffect(() => {
+    setCartItem((prevItem) => ({
+      ...prevItem,
+      quantity: count
+    }))
+  }, [count])
+
+  function handleAddCart() {
+    cartData.addToCart(cartItem)
+  }
+
   return(
     <div className="product-card">
       <h2>{props.title}</h2>
@@ -10,7 +33,7 @@ export default function ProductCard(props) {
       </div>
       <div className="text-container">
         <h3>${props.price}</h3>
-        <Counter/>
+        <Counter setCount={setCount} handleAddCart={handleAddCart} count={count}/>
         <div className="reviews">
           <p>Reviews: {props.count}</p>
           <p>Rating: {props.rate}</p>

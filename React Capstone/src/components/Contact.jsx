@@ -1,7 +1,5 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import PopUp from "./PopUp";
-import '../styles/Contact.scss';
+
+
 import { useRef } from 'react';
 
 export default function Contact() {

@@ -1,6 +1,4 @@
-import '../styles/Home.scss'
-import Header from './Header'
-import Footer from './Footer'
+
 import hero from '../assets/hero.jpg'
 
 

@@ -2,10 +2,9 @@
 import {useState, useEffect} from 'react'
 import { Commet } from 'react-loading-indicators'
 import { NavLink } from 'react-router-dom'
-import '../styles/product.scss'
 import Counter from './Counter'
-import Header from './Header'
-import Footer from './Footer'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartProvider'
 
 export default function Product() {
 
@@ -14,6 +13,9 @@ export default function Product() {
   const pathParts = currentUrl.split("/")
   const id = pathParts[pathParts.length - 1]
   const [isLoading, setIsLoading] = useState(true)
+  const [count, setCount] = useState(1)
+  const [cartItem, setCartItem] = useState({})
+  const cartData = useContext(CartContext)
 
   function getProduct(id) {
     fetch(`https://fakestoreapi.com/products/${id}`)
@@ -30,6 +32,29 @@ export default function Product() {
     
   }, [])
 
+  useEffect(() => {
+    setCartItem({
+      name: cardData.title,
+      price: cardData.price,
+      image: cardData.image,
+      id: cardData.uid,
+      quantity: count
+    })
+  }, [isLoading])
+
+    
+  
+    useEffect(() => {
+      setCartItem((prevItem) => ({
+        ...prevItem,
+        quantity: count
+      }))
+    }, [count])
+  
+    function handleAddCart() {
+      cartData.addToCart(cartItem)
+    }
+
    
 
   return(
@@ -44,7 +69,7 @@ export default function Product() {
           <div className="text-container-large">
             <h3>${cardData.price}</h3>
             <p>{cardData.description}</p>
-            <Counter/>
+            <Counter setCount={setCount} handleAddCart={handleAddCart} count={count}/>
             <div className="reviews-large">
               <p>Reviews: {cardData.rating.count}</p>
               <p>Rating: {cardData.rating.rate}</p>

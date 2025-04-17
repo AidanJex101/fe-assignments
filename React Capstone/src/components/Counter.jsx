@@ -1,16 +1,15 @@
-import {useState} from 'react'
-import '../styles/Counter.scss'
-export default function Counter() {
-  const [count, updateCount] = useState(1)
+
+
+export default function Counter(props) {
 
   return(
     <div className="counter-container">
       <section>
-        <button className="subtract" onClick={() => {if (count > 1) {updateCount(count - 1)}}}>-</button>
-        <h2>{count}</h2>
-        <button className="add" onClick={() => updateCount(count + 1)}>+</button>
+        <button className="subtract" onClick={() => {if (props.count > 1) (props.setCount((prevCount) => prevCount - 1))}}>-</button>
+        <h2>{props.count}</h2>
+        <button className="add" onClick={() => (props.setCount((prevCount) => prevCount + 1))}>+</button>
       </section>
-      <input type="submit" value="Add to Cart"/>
+      <input type="submit" value="Add to Cart" onClick={props.handleAddCart}/>
     </div>
   )
 }

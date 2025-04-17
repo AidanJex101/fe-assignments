@@ -1,7 +1,5 @@
-import Header from "./Header";
-import Footer from "./Footer";
+
 import ProductCard from "./ProductCard";
-import '../styles/Products.scss';
 import {useState, useEffect, useContext} from 'react'
 import { Commet } from "react-loading-indicators";
 import SideBar from "./SideBar";
