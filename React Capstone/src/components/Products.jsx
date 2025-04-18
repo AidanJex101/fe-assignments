@@ -32,7 +32,6 @@ export default function Products() {
   }
 
   function generateCards() {
-    console.log("I'm Generating!")
     return(
       data.map((card) => {
         if (isChecked.includes(card.category)) {
@@ -62,7 +61,6 @@ export default function Products() {
   }, [])
 
   useEffect(() => { 
-    console.log(data)
     getCategories()
     setIsChecked(categories)
     
@@ -71,7 +69,6 @@ export default function Products() {
 
   useEffect(() => {
     if (!type || !data?.length) return
-    console.log(type) 
     setData((d) => [...d].sort((a, b) => a[type] - b[type]))
   }, [type])
 
