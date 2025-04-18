@@ -13,16 +13,8 @@
         align-items: center;
         justify-content: center;
         font-size: 40px;
+        
     }
   }
-  input {
-    font-size: 25px;
-    width: 150px;
-    height: 50px;
-    background-color: rgba(187, 167, 217, 0.5);
-    &:hover {
-      background-color: purple;
-      color: white;
-    }
-  }
+  
 } 

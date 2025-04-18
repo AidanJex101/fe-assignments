@@ -23,6 +23,8 @@ export default function ProductCard(props) {
 
   function handleAddCart() {
     cartData.addToCart(cartItem)
+    setCount(1)
+    alert(`${cartItem.name} has been added to your cart`)
   }
 
   return(
@@ -33,7 +35,8 @@ export default function ProductCard(props) {
       </div>
       <div className="text-container">
         <h3>${props.price}</h3>
-        <Counter setCount={setCount} handleAddCart={handleAddCart} count={count}/>
+        <Counter setCount={setCount} count={count}/>
+        <input type="submit" value="Add to Cart" onClick={handleAddCart}/>
         <div className="reviews">
           <p>Reviews: {props.count}</p>
           <p>Rating: {props.rate}</p>

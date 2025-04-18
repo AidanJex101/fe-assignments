@@ -21,7 +21,7 @@
       transition: all 500ms;
     }
     button {
-      color: white
+      color: white;
     }
     img {
       transition: all 1000ms;
@@ -29,7 +29,7 @@
     }
     input {
       transition: all 500ms;
-      background-color: white;
+      
     }
   }
   .text-container {
@@ -37,7 +37,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    input {
+      font-size: 25px;
+      width: 150px;
+      height: 50px;
+      background-color: rgba(187, 167, 217, 0.5);
+    }
     .reviews {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       margin-top: 30px;

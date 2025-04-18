@@ -5,6 +5,8 @@ h2 {
     font-weight: bolder;
 }
 
+
+
 .contact-us-form-container {
     width: 1000px;
     height: fit-content;
@@ -85,12 +87,19 @@ h2 {
             font-size: 20px;
             font-weight: 700;
             cursor: pointer;
+
+        
             &:hover {
                 background-color: purple;
                 color: white;
                 transition: all 500ms;
             }
         }
+        
+           
+    }
+    h3 {
+        color: limegreen
     }
     
 }

@@ -44,8 +44,6 @@ export default function Products() {
     
   }
 
-
-
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then(response => response.json())
@@ -68,9 +66,14 @@ export default function Products() {
   }, [data])
 
   useEffect(() => {
-    if (!type || !data?.length) return
-    setData((d) => [...d].sort((a, b) => a[type] - b[type]))
-  }, [type])
+    setData((d) => [...d].sort((a, b) => a["id"] - b["id"]))
+    if (type === "title" || type === "categpry") {
+      setData((d) => [...d].sort((a, b) => a[type].localeCompare(b[type])))
+    }
+    if (order == "desc") {
+      setData((d) => [...d].reverse())
+    }
+  }, [type, order])
 
 
     

@@ -1,15 +1,44 @@
 import {useState, createContext} from 'react';
+import Counter from '../components/Counter';
 export const CartContext = createContext();
 
 export default function CartProvider({children}) {
   const [cart, setCart] = useState([]);
-
+  const [count, setCount] = useState(1);
   const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
+    let itemId = item.id;
+    let itemQuantity = item.quantity;
+    const existingItem = cart.find((cartItem) => cartItem.id === itemId);
+    if (existingItem) {
+      const updatedCart = cart.map((cartItem) => {
+        if (cartItem.id === itemId) {
+          return { ...cartItem, quantity: cartItem.quantity + itemQuantity };
+        }
+        return cartItem;
+      });
+      setCart(updatedCart);
+      return;
+    }
+    else {
+      setCart((prevCart) => [...prevCart, item]);
+    }
   };
 
-  const removeFromCart = (itemId) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
+  const removeFromCart = (item) => {
+    if (count === item.quantity) {
+      setCart((prevCart) => prevCart.filter((item) => item.id !== item.id));
+    }
+    else {
+      const updatedCart = cart.map((cartItem) => {
+        if (cartItem.id === item.id) {
+          return { ...cartItem, quantity: cartItem.quantity - count };
+        }
+        return cartItem;
+      });
+      setCart(updatedCart);
+      setCount(1);
+    }
+    
   };
 
   const getCart = () => {
@@ -23,6 +52,8 @@ export default function CartProvider({children}) {
                   <p>Price: ${item.price}</p>
                   <p>Amount: {item.quantity}</p>
               </div>
+              <Counter count={count} setCount={setCount} maxCount={item.quantity}></Counter>
+              <button onClick={() => {removeFromCart(item)}}>Remove from Cart</button>
             </div>
           );
         }
