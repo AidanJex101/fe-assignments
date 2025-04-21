@@ -1,5 +1,5 @@
 import {useState, createContext} from 'react';
-import Counter from '../components/Counter';
+import Counter from '../components/helper/Counter';
 export const CartContext = createContext();
 
 export default function CartProvider({children}) {
@@ -26,7 +26,7 @@ export default function CartProvider({children}) {
 
   const removeFromCart = (item) => {
     if (count === item.quantity) {
-      setCart((prevCart) => prevCart.filter((item) => item.id !== item.id));
+      setCart((prevCart) => prevCart.filter((prevItem) => prevItem.id !== item.id));
     }
     else {
       const updatedCart = cart.map((cartItem) => {
@@ -62,7 +62,7 @@ export default function CartProvider({children}) {
   }
 
   const getCartTotal = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   }
 
   const getCartQuantity = () => {

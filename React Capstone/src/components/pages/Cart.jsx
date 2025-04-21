@@ -1,6 +1,6 @@
 
 import { useContext, useEffect, useRef } from "react";
-import { CartContext } from "../context/CartProvider";
+import { CartContext } from "../../context/CartProvider";
 
 export default function Cart() {
     const cartInfo = useContext(CartContext);

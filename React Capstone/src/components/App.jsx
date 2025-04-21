@@ -1,15 +1,15 @@
 
 import '../styles/App.scss'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Home from './Home'
-import NotFound from './NotFound'
-import Products from './Products'
-import Contact from './Contact'
-import About from './About'
-import Product from './Product'
-import Header from './Header'
-import Footer from './Footer'
-import Cart from './Cart'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import Products from './pages/Products'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import Product from './pages/Product'
+import Header from './common/Header'
+import Footer from './common/Footer'
+import Cart from './pages/Cart'
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route exact path="/products" component={Products}/>
             <Route exact path="/cart" component={Cart}/>
-            <Route path="/products/" component={Product}/>
+            <Route path="/products/:id" component={Product}/>
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/about" component={About}/>
             <Route path="*" component={NotFound}/>
